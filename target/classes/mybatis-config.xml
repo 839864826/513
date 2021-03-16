@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <!--	环境配置： 环境：数据库的基本的配置-->
+<!--    <environments default="dev">-->
+
+        <!--一个环境：开发 、生成环境、测试环境	-->
+<!--        <environment id="dev">-->
+<!--            &lt;!&ndash;	事务管理器：JDBC&ndash;&gt;-->
+<!--            <transactionManager type="JDBC"/>-->
+<!--            &lt;!&ndash;	POOLED:基于连接池的形式配置数据源&ndash;&gt;-->
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver"-->
+<!--                          value="com.mysql.jdbc.Driver"/>-->
+<!--                <property name="url"-->
+<!--                          value="jdbc:mysql://porn513.dns.navy:3306/513?"/>-->
+<!--                <property name="username" value="root"/>-->
+<!--                <property name="password" value="root"/>-->
+<!--            </dataSource>-->
+<!--        </environment>-->
+
+
+
+    <environments default="dev">
+
+        <!--一个环境：开发 、生成环境、测试环境	-->
+        <environment id="dev">
+            <!--	事务管理器：JDBC-->
+            <transactionManager type="JDBC"/>
+            <!--	POOLED:基于连接池的形式配置数据源-->
+            <dataSource type="POOLED">
+                <property name="driver"
+                          value="com.mysql.jdbc.Driver"/>
+                <property name="url"
+                          value="jdbc:mysql://127.0.0.1:3306/513?"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+
+
+                <property name="poolPingEnabled" value="true"/>
+                <property name="poolPingQuery" value="select now() from classes limit 1"/>
+                <property name="poolPingConnectionsNotUsedFor" value="10000"/>
+
+            </dataSource>
+        </environment>
+
+
+
+
+
+
+
+        <!--	<environment id="product">-->
+        <!--	<transactionManager type="JDBC"/>-->
+        <!--	<dataSource type="POOLED">-->
+        <!--	<property name="driver"
+            value="${driver}"/>-->
+        <!--	<property name="url"
+        value="${url}"/>-->
+        <!--	<property name="username"
+        value="${username}"/>-->
+        <!--	<property name="password"
+        value="${password}"/>-->
+        <!--	</dataSource>-->
+        <!--	</environment>-->
+
+
+    </environments>
+
+    <!--	注册各个 Mapper-xml文件-->
+
+    <mappers>
+
+        <mapper resource="dao/Mysql.xml"/>
+
+    </mappers>
+</configuration>

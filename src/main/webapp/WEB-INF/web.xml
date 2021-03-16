@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+  <display-name>Archetype Created Web Application</display-name>
+<!--<welcome-file-list>-->
+<!--  <welcome-file>maine.jsp</welcome-file>-->
+<!--</welcome-file-list>-->
+
+
+
+  <servlet>
+    <servlet-name>wy</servlet-name>
+    <servlet-class>mains.Signin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>wy</servlet-name>
+    <url-pattern>/ss</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>mai</servlet-name>
+    <servlet-class>mail.sendmail</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>mai</servlet-name>
+    <url-pattern>/mail</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>hy</servlet-name>
+    <servlet-class>mains.zhu</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>hy</servlet-name>
+    <url-pattern>/zhu</url-pattern>
+  </servlet-mapping>
+
+
+
+
+
+
+</web-app>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.Mysql">
+
+
+    <select id="login" resultType="mysql.SysUser">select * from accounter where username =#{username}</select>
+
+    <select id="loginone" resultType="mysql.SysUser">select * from accounter where username =#{username} and pwd=#{pwd}</select>
+
+    <delete id="delete" parameterType="mysql.SysUser">delete  from accounter where username=#{username} and pwd=#{pwd}</delete>
+
+    <delete id="delete2" parameterType="mysql.SysUser">delete  from accounter where username=#{username}</delete>
+
+<!--    <update id="update" parameterType="mysql.SysUser">update accounter set username=#{sy.username},nickname=#{sy.nickname},pwd=#{sy.pwd},head=#{sy.head},birthday=#{sy.birthday},sex=#{sy.sex},address=#{sy.address},phone=#{sy.phone},signature=#{sy.signature} where username=#{name} </update>-->
+
+    <update id="update" parameterType="mysql.SysUser">update accounter set username=#{sy.username},nickname=#{sy.nickname},pwd=#{sy.pwd},birthday=#{sy.birthday},sex=#{sy.sex},address=#{sy.address},phone=#{sy.phone},signature=#{sy.signature} where username=#{name} </update>
+
+
+    <update id="updates" parameterType="mysql.SysUser">update accounter set head=#{head} where username=#{name} </update>
+
+    <insert id="insert" parameterType="mysql.SysUser">insert into accounter (username,nickname,pwd) values (#{username},#{nickname},#{pwd})</insert>
+    <!--shi bai le pao yi chang-->
+
+
+
+
+    <select id="logintext" resultType="mysql.Systext" flushCache="true">select * from chat order  by id</select>
+<!--    查询所有信息-->
+
+    <select id="loginid" resultType="mysql.Systext"  flushCache="true">select * from chat where id=#{id}</select>
+    <!--    查询指定id信息-->
+
+    <update id="updatetext" parameterType="mysql.Systext">update chat set nickname=#{sy.nickname} where id=#{id} </update>
+<!--修改-->
+
+    <insert id="inserttext" parameterType="mysql.Systext">insert into chat (head,nickname,email,text,time,staus) values (#{st.head},#{st.nickname},#{st.email},#{st.text},#{st.time},#{st.staus})</insert>
+<!--插入输出对话框-->
+
+    <insert id="insertstaus" parameterType="mysql.Systext">insert into chat (nickname,staus) values (#{nickname},#{staus})</insert>
+    <!--插入撤回的消息-->
+
+    <delete id="deletetext" parameterType="mysql.Systext">delete  from chat where id=#{id}</delete>
+<!--删除撤回的消息-->
+
+    <delete id="deletestaus" parameterType="mysql.Systext">delete  from chat where staus=#{staus}</delete>
+    <!--删除撤回的消息-->
+
+</mapper>

@@ -1,0 +1,38 @@
+.bbbug_my_setting__form {
+    background-color: #fff;
+    padding: 20px;
+    padding-left: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    top: 55px;
+    overflow: hidden;
+    overflow-y: auto
+}
+
+.el-select {
+    display: block
+}
+
+.bbbug_my_setting__clear {
+    position: absolute;
+    left: 0;
+    right: 10px;
+    bottom: 10px;
+    text-align: right
+}
+
+.bbbug_my_setting__clear_button {
+    background-color: #ff4500;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer
+}
+
+.bbbug_my_setting__clear_button:active {
+    background-color: red
+}

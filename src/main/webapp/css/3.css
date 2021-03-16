@@ -1,0 +1,872 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000
+}
+
+audio {
+    position: fixed;
+    right: 10px;
+    top: 10px
+}
+
+[v-cloak] {
+    visibility: hidden !important
+}
+
+body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+@font-face {
+    font-family: Gotham-Book;
+    src: url(16c14fa7a1a9dc9dc0397f85b7480cac.woff2)
+}
+
+* {
+    font-family: Gotham-Book;
+    background-attachment: fixed;
+    outline: none;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.bbbug_main_chat_content, .bbbug_main_chat_name, input, textarea {
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 5px
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .2)
+}
+
+::-webkit-scrollbar-button {
+    background-color: transparent
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent
+}
+
+.love {
+    animation: rotate 20s linear infinite
+}
+
+.love_fast {
+    animation: rotate 5s linear infinite
+}
+
+.user_icon {
+    cursor: pointer;
+    vertical-align: middle
+}
+
+.user_male {
+    color: #759fd1
+}
+
+.user_female {
+    color: #f288a4
+}
+
+.bbbug_scroll {
+    overflow: hidden;
+    overflow-y: scroll
+}
+
+.bbbug_scroll, .bbbug_tips {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0
+}
+
+.bbbug_tips {
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    color: #999;
+    font-size: 12px;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center
+}
+
+.bbbug_bg {
+    background: #000 url("/") top no-repeat;
+    background-size: cover;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0
+}
+
+.bbbug_main {
+    position: fixed;
+    left: 8%;
+    right: 8%;
+    top: 8%;
+    bottom: 8%
+}
+
+.bbbug_main_box {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0
+}
+
+.bbbug_frame, .bbbug_main_box {
+    border-radius: 10px;
+    overflow: hidden
+}
+
+.bbbug_frame {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3)
+}
+
+.bbbug_main_menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    background-color: #333;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px
+}
+
+.bbbug_main_menu_head {
+    margin-top: 20px;
+    margin-bottom: 50px
+}
+
+.bbbug_main_menu_head img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+.bbbug_main_menu_icon {
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    outline: none
+}
+
+.bbbug_main_menu_icon div {
+    font-size: 12px;
+    color: #999;
+    text-decoration: none;
+    outline: none
+}
+
+.bbbug_main_menu_icon a:hover {
+    color: #fff
+}
+
+.bbbug_main_menu_icon img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: -8px
+}
+
+.bbbug_main_menu_song {
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+    right: 0
+}
+
+.bbbug_main_menu_song img {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 0 0 15px hsla(0, 0%, 100%, .5)
+}
+
+.bbbug_main_menu_song_box {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    position: absolute;
+    left: 90px;
+    bottom: 110px;
+    z-index: 99;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    border-radius: 10px
+}
+
+.bbbug_main_menu_song_title {
+    font-size: 16px;
+    text-align: left;
+    font-weight: 700;
+    color: #666;
+    width: 200px
+}
+
+.bbbug_main_menu_song_user {
+    font-size: 12px;
+    text-align: left;
+    margin-top: 0;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle
+}
+
+.bbbug_main_menu_song_user .iconfont {
+    font-size: 18px;
+    color: #666;
+    margin-right: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: -2px;
+    font-weight: bolder
+}
+
+.bbbug_main_menu_song_user .iconfont:hover {
+    color: #ff4500
+}
+
+.bbbug_main_menu_song_bg {
+    width: 200px;
+    border: 1px solid #eee;
+    border-radius: 5px
+}
+
+.bbbug_main_menu_setting {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    right: 0
+}
+
+.bbbug_main_menu_song_ctrl {
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 130px
+}
+
+.bbbug_main_menu_song_ctrl .iconfont {
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #666;
+    margin: 0 3px
+}
+
+.bbbug_main_menu_song_ctrl .volume_bar {
+    cursor: pointer;
+    font-size: 24px
+}
+
+.bbbug_main_menu_song_ctrl .iconfont:hover {
+    color: #ff4500
+}
+
+.bbbug_main_menu_song_volume_bar {
+    position: absolute !important;
+    right: 5px;
+    bottom: 165px
+}
+
+.bbbug_main_menu_setting img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer
+}
+
+.bbbug_main_right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 25%;
+    min-width: 360px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    background-color: #f5f5f5;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden
+}
+
+.bbbug_main_chat_room_info {
+    padding: 10px;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 1px solid #eee
+}
+
+.bbbug_main_chat_online {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    cursor: pointer;
+    color: #999
+}
+
+.bbbug_main_chat_online, .bbbug_main_chat_online .iconfont, .bbbug_main_chat_online font {
+    font-size: 14px;
+    vertical-align: middle
+}
+
+.bbbug_main_chat_online font {
+    margin-left: 3px;
+    display: inline-block
+}
+
+.bbbug_main_chat_room_id {
+    background-color: #fff;
+    color: #ff4500;
+    border-radius: 3px;
+    border: 1px solid #ff4500;
+    padding: 2px 5px;
+    font-size: 12px;
+    font-weight: 500;
+    font-weight: 700
+}
+
+.bbbug_main_room_icon {
+    color: #ff4500;
+    font-weight: 700;
+    margin-right: 5px;
+    cursor: pointer
+}
+
+.bbbug_main_room_icon, .bbbug_main_room_icon_setting:before {
+    vertical-align: middle;
+    font-size: 16px
+}
+
+.bbbug_main_room_icon_setting {
+    font-size: 14px;
+    cursor: pointer
+}
+
+.bbbug_main_room_online {
+    color: #ff4500;
+    margin-right: 5px
+}
+
+.bbbug_main_right_online_box {
+    width: 300px;
+    min-width: auto
+}
+
+.bbbug_main_right_online_title {
+    padding: 12px;
+    text-align: left;
+    font-size: 18px;
+    background-color: #fff;
+    margin-bottom: 10px
+}
+
+.bbbug_main_right_online_list {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 50px
+}
+
+.bbbug_main_right_online_item {
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 5px;
+    height: 55px;
+    cursor: pointer;
+    text-align: left;
+    padding: 10px;
+    position: relative;
+    overflow: hidden
+}
+
+.bbbug_main_right_online_user_head {
+    position: absolute;
+    left: 10px;
+    top: 10px
+}
+
+.bbbug_main_right_online_user_head_image {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid #f5f5f5
+}
+
+.bbbug_main_right_online_user_badge {
+    background-color: #ddd;
+    color: #666
+}
+
+.bbbug_main_right_online_user_badge, .bbbug_main_right_online_user_badge_guest {
+    transform: rotate(45deg);
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 78px;
+    font-size: 12px
+}
+
+.bbbug_main_right_online_user_badge_guest {
+    background-color: #90ee90;
+    color: #999
+}
+
+.bbbug_main_right_online_user_badge_admin {
+    background-color: #666;
+    color: #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 78px;
+    font-size: 12px
+}
+
+.bbbug_main_right_online_user_nick {
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    line-height: 20px
+}
+
+.bbbug_main_right_online_user {
+    margin-left: 60px;
+    margin-top: 3px
+}
+
+.bbbug_main_right_online_desc {
+    font-size: 12px;
+    color: #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 10px;
+    vertical-align: middle
+}
+
+.bbbug_main_right_room_item {
+    background-color: #fff;
+    margin: 0 5px 10px;
+    border-radius: 5px;
+    height: 80px;
+    cursor: pointer;
+    text-align: left;
+    padding: 10px;
+    position: relative
+}
+
+.bbbug_main_right_room_title {
+    padding: 12px;
+    text-align: left;
+    font-size: 18px;
+    background-color: #fff;
+    margin-bottom: 10px
+}
+
+.bbbug_main_right_room_right {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 14px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px 15px;
+    cursor: pointer
+}
+
+.bbbug_main_right_room_list {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 110px
+}
+
+.bbbug_main_right_room_name {
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 50px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 700
+}
+
+.bbbug_main_right_room_id {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 12px;
+    background-color: #f5f5f5;
+    color: #999;
+    padding: 2px 5px;
+    border-radius: 5px
+}
+
+.bbbug_main_right_room_info {
+    position: relative;
+    margin-top: 20px
+}
+
+.bbbug_main_right_room_user_head {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px
+}
+
+.bbbug_main_right_room_user_nick {
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 20px
+}
+
+.bbbug_main_right_room_user {
+    margin-left: 50px
+}
+
+.bbbug_main_right_room_desc {
+    font-size: 12px;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 5px
+}
+
+.bbbug_search_song_user {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    text-align: center
+}
+
+.bbbug_search_song_user_box {
+    width: 300px;
+    display: inline-block;
+    position: relative;
+    height: 60px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    border-radius: 10px
+}
+
+.bbbug_search_song_head {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid #eee;
+    position: absolute;
+    left: 5px;
+    top: 5px
+}
+
+.bbbug_search_song_name {
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    left: 65px;
+    top: 5px;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 190px;
+    text-align: left
+}
+
+.bbbug_search_song_tips {
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    left: 65px;
+    top: 35px;
+    text-align: left
+}
+
+.bbbug_search_song_cancel {
+    background-color: #eee;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 12px;
+    color: #666;
+    padding: 3px 10px;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+.bbbug_search_song_cancel:active {
+    background-color: #ccc
+}
+
+.bbbug_main_right_song_item {
+    background-color: #fff;
+    margin: 0 5px 10px;
+    border-radius: 5px;
+    height: 50px;
+    cursor: pointer;
+    text-align: left;
+    padding: 10px;
+    position: relative
+}
+
+.bbbug_main_right_song_title {
+    padding: 12px;
+    text-align: left;
+    font-size: 18px;
+    background-color: #fff;
+    margin-bottom: 10px
+}
+
+.bbbug_main_right_song_right {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 14px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px 15px;
+    cursor: pointer;
+    text-decoration: none
+}
+
+.bbbug_main_right_song_list_search {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 110px
+}
+
+.bbbug_main_right_song_list {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 55px
+}
+
+.bbbug_main_right_song_name {
+    margin-right: 80px;
+    font-size: 14px;
+    color: #333
+}
+
+.bbbug_main_right_song_name, .bbbug_main_right_song_singer {
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.bbbug_main_right_song_singer {
+    font-size: 12px;
+    color: #999;
+    margin-top: 15px
+}
+
+.bbbug_main_right_song_singer_at {
+    color: #ff4500
+}
+
+.bbbug_main_right_song_controll {
+    position: absolute;
+    right: 10px;
+    top: 10px
+}
+
+.bbbug_main_right_song_button {
+    border: none;
+    padding: 2px 5px;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: #fff
+}
+
+.bbbug_main_right_song_add {
+    color: #999;
+    border: 1px solid #ddd
+}
+
+.bbbug_main_right_song_add:hover {
+    color: #333;
+    border: 1px solid #333
+}
+
+.bbbug_main_right_song_delete {
+    color: orange;
+    border: 1px solid orange
+}
+
+.bbbug_main_right_song_delete:hover {
+    color: #ff4500;
+    border: 1px solid #ff4500
+}
+
+.bbbug_main_right_song_played {
+    color: #ff4500;
+    margin-right: 3px
+}
+
+@media screen and (max-width: 1200px) {
+    .bbbug_main {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%
+    }
+
+    .bbbug_main_box {
+        border-radius: 0
+    }
+
+    .bbbug_main_right {
+        border-radius: 0 !important
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .bbbug_main {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%
+    }
+
+    .bbbug_main_box {
+        border-radius: 0
+    }
+
+    .bbbug_main_right {
+        border-radius: 0 !important
+    }
+}
+
+.bbbug_phone_message_back {
+    display: none
+}
+
+@media screen and (max-width: 480px) {
+    .bbbug_main_right {
+        left: 80px;
+        right: 0;
+        width: auto !important;
+        min-width: auto !important;
+        box-shadow: none !important;
+        border-radius: 0 !important
+    }
+
+    .bbbug_phone_message_back {
+        display: inline-block
+    }
+
+    .hideWhenPhone {
+        display: none !important
+    }
+
+    .bbbug_main_chat_emojis {
+        width: auto !important;
+        position: fixed !important;
+        left: 10px !important;
+        right: 10px !important
+    }
+
+    .el-message-box__wrapper {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+
+    .bbbug_login {
+        padding: 0 20px
+    }
+
+    .el-message-box {
+        width: 90%
+    }
+
+    .el-message {
+        width: 90%;
+        min-width: auto
+    }
+}
