@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.Mysql">
+
+
+    <select id="login" resultType="mysql.SysUser">select * from accounter where username =#{username}</select>
+
+    <select id="loginone" resultType="mysql.SysUser">select * from accounter where username =#{username} and pwd=#{pwd}</select>
+
+    <delete id="delete" parameterType="mysql.SysUser">delete  from accounter where username=#{username} and pwd=#{pwd}</delete>
+
+    <delete id="delete2" parameterType="mysql.SysUser">delete  from accounter where username=#{username}</delete>
+
+    <update id="update" parameterType="mysql.SysUser">update accounter set username=#{sy.username},nickname=#{sy.nickname},pwd=#{sy.pwd} where username=#{name} </update>
+
+    <insert id="insert" parameterType="mysql.SysUser">insert into accounter (username,nickname,pwd) values (#{username},#{nickname},#{pwd})</insert>
+    <!--shi bai le pao yi chang-->
+
+</mapper>
